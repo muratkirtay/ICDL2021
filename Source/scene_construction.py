@@ -32,9 +32,8 @@ def generate_rectangled_patterns(dpath, imlist, rectpath):
         cv2.imwrite(rectpath+i, rimg)
 
 
-
 def create_green_bordered_imgs(pspath, green_spath, nof_patterns):
-    """ Create red-bordered version of scene patterns
+    """ Create red-bordered version of scene patterns.
         Later, they will be used for creating switching scene
     """
     h, w = 512, 512
@@ -45,7 +44,7 @@ def create_green_bordered_imgs(pspath, green_spath, nof_patterns):
         bimg = rimg
         cv2.rectangle(bimg, (0, 0), (w, h), (0, 255, 0), 13)
         cv2.imwrite(green_spath+str(i)+'.png', bimg)
-        
+
   
 def create_red_bordered_imgs(pspath, red_spath, nof_patterns):
     """ Create red-bordered version of scene patterns.
@@ -61,9 +60,10 @@ def create_red_bordered_imgs(pspath, red_spath, nof_patterns):
 
 
 def create_scene(patterns, pspath):
-    """" Create a scene by randomly permuting the pattern order.
+    """ Create a scene by randomly permuting the pattern order.
          Then adapt one of the configurations.
     """
+
     #perm = np.random.permutation(len(patterns)).reshape((4, 5))
     perm = np.asarray([[0, 1, 12, 17, 15],
                        [10, 16, 6, 7, 4],

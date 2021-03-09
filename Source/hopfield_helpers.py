@@ -67,10 +67,10 @@ def capture_robot_camera(IP_PEPPER, PORT):
     return result[6], image
 
 def extract_convergence_rate(test, original, num_of_neurons):
-    ''' Extract contamination rate for converged pattern. The 
+    """ Extract contamination rate for converged pattern. The 
     	high rate for convergence rate indicates how well 
     	pattern recalled by HN dynamics
-    '''
+    """
 
     return np.sum(test == original) * 100/num_of_neurons
 

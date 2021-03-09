@@ -51,6 +51,7 @@ def plot_reward_curve(rew_mat, fig_title):
 
 def plot_energy_state(state_energy, fig_title, datatype):
     """ Plot the energy consumption for a given pattern """
+    
     axis = sns.plt.gca()
     sns.heatmap(state_energy,  annot=True, fmt=datatype, cbar=False, cmap="YlGnBu", linewidths=1)
     sns.plt.title(fig_title, fontweight='bold')
@@ -116,6 +117,7 @@ def plot_average_td_curve(td_avg_mag, win_size, fname):
 
 def plot_td_curve(td_mat, win_size, fname):
     """ Plot td error for all patters in full iteration """
+
     nof_runs = 5
     for i in range(nof_runs):
         td_val = running_average(td_mat[i], win_size, mode='valid')
