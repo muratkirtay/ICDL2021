@@ -10,4 +10,4 @@ A repository for reproducing the results presented in ICDL-2021 submission.
 + **Figures:** the subfolders host the figures generated for the articles, the related figures (e.g., average energy, total visits, Q matrices, TD errors, cumulative reward curves) for all runs for each instructors. 
 + **Logs:** various logs to evaluate results: final policy, number of correct actions, etc. Note that the folders and logs with unreliable instructor renamed as less reliable instructor.  
 + **TheRobotTrustICDL2021.mp4:** A video file to show the experiment demo and the interactions with an instructor.  
-+ **requirements.txt:** a text file contains the version numbers of the python packages for running the scripts; use **pip install -r requirements.txt** to install the packages with correct versions.  
++ **versions.txt:** a text file contains the version numbers of the python packages for running the scripts.
